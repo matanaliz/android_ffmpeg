@@ -4,9 +4,9 @@
 #include <jni.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../ffmpeg/VideoPlayer.h"
-#include "../../ffmpeg/log.h"
-#include "../../ffmpeg/Render.h"
+#include <VideoDecoder.h>
+#include <log.h>
+#include <Render.h>
 
 #ifdef __cplusplus
 extern "C" {

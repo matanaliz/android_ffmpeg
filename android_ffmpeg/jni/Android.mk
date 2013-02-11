@@ -12,11 +12,18 @@ include $(PREBUILT_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := nativeffmpeg
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../ffmpeg \
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../ffmpeg/include \
                     $(LOCAL_PATH)/../../rockplayer_ffmpeg_git_20100418/android/$(TARGET_ARCH)/include/
 
 
-LOCAL_SRC_FILES := NativeVideo.cpp ../../ffmpeg/VideoPlayer.cpp ../../ffmpeg/Render.cpp ../../ffmpeg/ShaderProgram.cpp ../../ffmpeg/Threading.cpp
+LOCAL_SRC_FILES := NativeVideo.cpp \
+				   ../../ffmpeg/src/VideoDecoder.cpp \
+				   ../../ffmpeg/src/VideoDecoderImpl.cpp \
+				   ../../ffmpeg/src/Render.cpp \
+				   ../../ffmpeg/src/ShaderProgram.cpp \
+				   ../../ffmpeg/src/Threading.cpp
+
+#../../ffmpeg/src/VideoPlayer.cpp ../../src/ffmpeg/Render.cpp ../../ffmpeg/ShaderProgram.cpp ../../ffmpeg/Threading.cpp
 
 LOCAL_SHARED_LIBRARIES := ffmpeg
 
