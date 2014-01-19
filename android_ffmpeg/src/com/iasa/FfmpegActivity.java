@@ -3,8 +3,6 @@ package com.iasa;
 import android.app.Activity;
 import android.os.Bundle;
 
-import java.nio.ByteBuffer;
-
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.Intent;
@@ -63,9 +61,7 @@ public class FfmpegActivity extends Activity implements View.OnClickListener, Vi
     }
     
     public void onClick(View v) {
-	
 		mf.Pause();
-
 	}
 	
     public boolean onLongClick(View v) {

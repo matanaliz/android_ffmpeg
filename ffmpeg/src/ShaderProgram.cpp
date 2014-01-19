@@ -1,8 +1,6 @@
 #include "ShaderProgram.h"
 
 static GLuint loadShader(GLenum shaderType, const char* pSource);
-static GLuint createGLtex2dFromBuffer(const unsigned char* buffer, int width, int height, GLenum texture);
-
                
 ShaderProgram::ShaderProgram(const char* vertex, const char* fragment)
 {
@@ -106,18 +104,3 @@ GLuint loadShader(GLenum shaderType, const char* pSource)
     }
     return shader;
 }
-
-
-
-GLuint createGLtex2dFromBuffer(const unsigned char* buffer, int width, int height, GLenum texture)
-{
-        //~ glActiveTexture(texture);
-        //~ glBindTexture(GL_TEXTURE_2D, textureID);
-        //~ glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
-        //~ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        //~ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);  
-        //~ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        //~ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        //~ return textureID;
-}
-
